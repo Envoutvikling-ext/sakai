@@ -3,7 +3,8 @@
     "version": "4.3.0",
     "scripts": {
         "dev": "vite",
-        "build": "vite build",
+        "typecheck": "vue-tsc -b",
+        "build": "vue-tsc -b && vite build",
         "build:preview": "vite build --mode preview",
         "preview": "npm run build:preview && vite preview",
         "lint": "eslint --fix . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
@@ -21,14 +22,18 @@
         "@primevue/auto-import-resolver": "^4.3.1",
         "@rushstack/eslint-patch": "^1.8.0",
         "@tailwindcss/vite": "^4.1.17",
-        "@vitejs/plugin-vue": "^5.0.5",
+        "@types/node": "^25.0.3",
+        "@vitejs/plugin-vue": "^6.0.3",
         "@vue/eslint-config-prettier": "^9.0.0",
+        "@vue/tsconfig": "^0.8.1",
         "eslint": "^8.57.0",
         "eslint-plugin-vue": "^9.23.0",
         "prettier": "^3.2.5",
         "sass": "^1.55.0",
         "tailwindcss": "^4.1.17",
+        "typescript": "^5.9.3",
         "unplugin-vue-components": "^0.27.3",
-        "vite": "^5.3.1"
+        "vite": "^7.3.1",
+        "vue-tsc": "^3.2.2"
     }
 }

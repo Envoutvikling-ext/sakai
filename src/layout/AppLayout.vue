@@ -1,5 +1,5 @@
-<script setup>
-import { useLayout } from '@/layout/composables/layout';
+<script setup lang="ts">
+import { useLayout } from '@/layout/composables/layout.ts';
 import { computed } from 'vue';
 import AppFooter from './AppFooter.vue';
 import AppSidebar from './AppSidebar.vue';
