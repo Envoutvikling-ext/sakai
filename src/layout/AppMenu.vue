@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-import AppMenuItem from './AppMenuItem.vue';
+import { ref } from 'vue'
+import AppMenuItem from './AppMenuItem.vue'
 
 interface MenuItem {
-  label?: string;
-  icon?: string;
-  to?: string;
-  url?: string;
-  target?: string;
-  class?: string;
-  separator?: boolean;
-  path?: string;
-  items?: MenuItem[];
+  label?: string
+  icon?: string
+  to?: string
+  url?: string
+  target?: string
+  class?: string
+  separator?: boolean
+  path?: string
+  items?: MenuItem[]
 }
 
 const model = ref<MenuItem[]>([
@@ -21,9 +21,9 @@ const model = ref<MenuItem[]>([
       {
         label: 'Dashboard',
         icon: 'pi pi-fw pi-home',
-        to: '/'
-      }
-    ]
+        to: '/',
+      },
+    ],
   },
   {
     label: 'UI Components',
@@ -32,9 +32,9 @@ const model = ref<MenuItem[]>([
       {
         label: 'Form Layout',
         icon: 'pi pi-fw pi-id-card',
-        to: '/uikit/formlayout'
+        to: '/uikit/formlayout',
       },
-    ]
+    ],
   },
   {
     label: 'Pages',
@@ -44,16 +44,16 @@ const model = ref<MenuItem[]>([
       {
         label: 'Not Found',
         icon: 'pi pi-fw pi-exclamation-circle',
-        to: '/pages/notfound'
+        to: '/pages/notfound',
       },
       {
         label: 'Empty',
         icon: 'pi pi-fw pi-circle-off',
-        to: '/pages/empty'
-      }
-    ]
+        to: '/pages/empty',
+      },
+    ],
   },
-]);
+])
 </script>
 
 <template>

@@ -1,19 +1,20 @@
 <script setup lang="ts">
-import { ProductService } from '@/service/ProductService';
-import { onMounted, ref } from 'vue';
-import DataTable from 'primevue/datatable';
-import Column from 'primevue/column';
-import Button from 'primevue/button';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { ProductService } from '@/service/ProductService'
+import { onMounted, ref } from 'vue'
+import DataTable from 'primevue/datatable'
+import Column from 'primevue/column'
+import Button from 'primevue/button'
 
-const products = ref<any[]>([]);
+const products = ref<any[]>([])
 
 function formatCurrency(value: any) {
-  return value.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+  return value.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
 }
 
 onMounted(() => {
-  ProductService.getProductsSmall().then((data) => (products.value = data));
-});
+  ProductService.getProductsSmall().then((data) => (products.value = data))
+})
 </script>
 
 <template>
@@ -22,7 +23,12 @@ onMounted(() => {
     <DataTable :value="products" :rows="5" :paginator="true" responsiveLayout="scroll">
       <Column style="width: 15%" header="Image">
         <template #body="slotProps">
-          <img :src="`https://primefaces.org/cdn/primevue/images/product/${slotProps.data.image}`" :alt="slotProps.data.image" width="50" class="shadow" />
+          <img
+            :src="`https://primefaces.org/cdn/primevue/images/product/${slotProps.data.image}`"
+            :alt="slotProps.data.image"
+            width="50"
+            class="shadow"
+          />
         </template>
       </Column>
       <Column field="name" header="Name" :sortable="true" style="width: 35%"></Column>

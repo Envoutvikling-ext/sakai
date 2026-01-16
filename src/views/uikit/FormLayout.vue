@@ -1,18 +1,18 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-import Fluid from 'primevue/fluid';
-import InputText from 'primevue/inputtext';
-import Button from 'primevue/button';
-import Select from 'primevue/select';
-import Textarea from 'primevue/textarea';
+import { ref } from 'vue'
+import Fluid from 'primevue/fluid'
+import InputText from 'primevue/inputtext'
+import Button from 'primevue/button'
+import Select from 'primevue/select'
+import Textarea from 'primevue/textarea'
 
 const dropdownItems = ref([
   { name: 'Option 1', code: 'Option 1' },
   { name: 'Option 2', code: 'Option 2' },
-  { name: 'Option 3', code: 'Option 3' }
-]);
+  { name: 'Option 3', code: 'Option 3' },
+])
 
-const dropdownItem = ref();
+const dropdownItem = ref()
 </script>
 
 <template>
@@ -113,7 +113,14 @@ const dropdownItem = ref();
         <div class="flex flex-col md:flex-row gap-4">
           <div class="flex flex-wrap gap-2 w-full">
             <label for="state">State</label>
-            <Select id="state" v-model="dropdownItem" :options="dropdownItems" optionLabel="name" placeholder="Select One" class="w-full"></Select>
+            <Select
+              id="state"
+              v-model="dropdownItem"
+              :options="dropdownItems"
+              optionLabel="name"
+              placeholder="Select One"
+              class="w-full"
+            ></Select>
           </div>
           <div class="flex flex-wrap gap-2 w-full">
             <label for="zip">Zip</label>

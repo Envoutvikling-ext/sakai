@@ -1,67 +1,67 @@
 <script setup lang="ts">
-import { useLayout } from '@/layout/composables/layout.ts';
-import { onBeforeUnmount, ref, watch } from 'vue';
-import { useRoute } from 'vue-router';
-import AppMenu from './AppMenu.vue';
+import { useLayout } from '@/layout/composables/layout.ts'
+import { onBeforeUnmount, ref, watch } from 'vue'
+import { useRoute } from 'vue-router'
+import AppMenu from './AppMenu.vue'
 
-const { layoutState, isDesktop, hasOpenOverlay } = useLayout();
-const route = useRoute();
-const sidebarRef = ref<HTMLElement | null>(null);
-let outsideClickListener: ((event: MouseEvent) => void) | null = null;
+const { layoutState, isDesktop, hasOpenOverlay } = useLayout()
+const route = useRoute()
+const sidebarRef = ref<HTMLElement | null>(null)
+let outsideClickListener: ((event: MouseEvent) => void) | null = null
 
 watch(
   () => route.path,
   (newPath) => {
-    if (isDesktop()) layoutState.activePath = null;
-    else layoutState.activePath = newPath;
+    if (isDesktop()) layoutState.activePath = null
+    else layoutState.activePath = newPath
 
-    layoutState.overlayMenuActive = false;
-    layoutState.mobileMenuActive = false;
-    layoutState.menuHoverActive = false;
+    layoutState.overlayMenuActive = false
+    layoutState.mobileMenuActive = false
+    layoutState.menuHoverActive = false
   },
-  { immediate: true }
-);
+  { immediate: true },
+)
 
 watch(hasOpenOverlay, (newVal) => {
   if (isDesktop()) {
-    if (newVal) bindOutsideClickListener();
-    else unbindOutsideClickListener();
+    if (newVal) bindOutsideClickListener()
+    else unbindOutsideClickListener()
   }
-});
+})
 
 const bindOutsideClickListener = () => {
   if (!outsideClickListener) {
     outsideClickListener = (event: MouseEvent) => {
       if (isOutsideClicked(event)) {
-        layoutState.overlayMenuActive = false;
+        layoutState.overlayMenuActive = false
       }
-    };
+    }
 
-    document.addEventListener('click', outsideClickListener);
+    document.addEventListener('click', outsideClickListener)
   }
-};
+}
 
 const unbindOutsideClickListener = () => {
   if (outsideClickListener) {
-    document.removeEventListener('click', outsideClickListener);
-    outsideClickListener = null;
+    document.removeEventListener('click', outsideClickListener)
+    outsideClickListener = null
   }
-};
+}
 
 const isOutsideClicked = (event: MouseEvent) => {
-  const topbarButtonEl = document.querySelector('.layout-menu-button');
+  const topbarButtonEl = document.querySelector('.layout-menu-button')
 
   return !(
     sidebarRef.value?.isSameNode(event.target as Node) ||
     sidebarRef.value?.contains(event.target as Node) ||
     topbarButtonEl?.isSameNode(event.target as Node) ||
     topbarButtonEl?.contains(event.target as Node)
-  );
-};
+  )
+}
 
 onBeforeUnmount(() => {
-  unbindOutsideClickListener();
-});
+  unbindOutsideClickListener()
+})
 </script>
 
 <template>
