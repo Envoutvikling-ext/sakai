@@ -71,7 +71,7 @@ const onMouseEnter = () => {
     </router-link>
     <Transition v-if="item.items && item.visible !== false" name="layout-submenu">
       <ul v-show="root ? true : isActive" class="layout-submenu">
-        <app-menu-item v-for="child in item.items" :key="child.label + '_' + (child.to || child.path)" :item="child" :root="false" :parentPath="fullPath" />
+        <AppMenuItem v-for="child in item.items" :key="child.label + '_' + (child.to || child.path)" :item="child" :root="false" :parentPath="fullPath" />
       </ul>
     </Transition>
   </li>

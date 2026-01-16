@@ -6,6 +6,7 @@ import Aura from '@primeuix/themes/aura';
 import PrimeVue from 'primevue/config';
 import ConfirmationService from 'primevue/confirmationservice';
 import ToastService from 'primevue/toastservice';
+import StyleClass from 'primevue/styleclass';
 
 import '@/assets/tailwind.css';
 import '@/assets/styles.scss';
@@ -21,6 +22,7 @@ app.use(PrimeVue, {
         }
     }
 });
+app.directive('styleclass', StyleClass);
 app.use(ToastService);
 app.use(ConfirmationService);
 

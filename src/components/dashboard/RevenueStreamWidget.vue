@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useLayout } from '@/layout/composables/layout';
 import { onMounted, ref, watch } from 'vue';
+import Chart from 'primevue/chart';
 
 const { layoutConfig, isDarkTheme } = useLayout();
 

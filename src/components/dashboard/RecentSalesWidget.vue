@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { ProductService } from '@/service/ProductService';
 import { onMounted, ref } from 'vue';
+import DataTable from 'primevue/datatable';
+import Column from 'primevue/column';
+import Button from 'primevue/button';
 
 const products = ref<any[]>([]);
 
