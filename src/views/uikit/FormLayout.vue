@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue';
 
 const dropdownItems = ref([
@@ -7,7 +7,7 @@ const dropdownItems = ref([
     { name: 'Option 3', code: 'Option 3' }
 ]);
 
-const dropdownItem = ref(null);
+const dropdownItem = ref();
 </script>
 
 <template>

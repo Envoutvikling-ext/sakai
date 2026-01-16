@@ -31,17 +31,17 @@ export default defineConfig(({ command, mode }) => {
             manifest: 'manifest.json',
             rollupOptions: {
                 // If we are doing a standard build, use index.html as entry
-                // If we are building specifically for the CDN/Library, use main.js
-                input: mode === 'production' ? 'src/main.js' : 'index.html'
+                // If we are building specifically for the CDN/Library, use main.ts
+                input: mode === 'production' ? 'src/main.ts' : 'index.html'
             }
         },
-        css: {
-            preprocessorOptions: {
-                scss: {
-                    api: 'modern-compiler'
-                }
-            }
-        },
+        // css: {
+        //     preprocessorOptions: {
+        //         scss: {
+        //             api: 'modern-compiler'
+        //         }
+        //     }
+        // },
         server: {
             cors: true,
             port: 5173,
