@@ -2,7 +2,27 @@
 import { useLayout } from '@/layout/composables/layout'
 import AppConfigurator from './AppConfigurator.vue'
 import InlineSvg from '@/components/InlineSvg.vue'
+import Button from 'primevue/button'
+import Menu from 'primevue/menu'
+import { ref } from 'vue'
 
+const menu = ref()
+const items = ref([
+  {
+    label: 'Profile',
+    items: [
+      {
+        label: 'My info',
+        icon: 'pi pi-id-card',
+        route: '/pages/myinfo',
+      },
+    ],
+  },
+])
+
+const toggle = (event: Event) => {
+  menu.value.toggle(event)
+}
 const { toggleMenu, toggleDarkMode, isDarkTheme } = useLayout()
 </script>
 
@@ -66,10 +86,30 @@ const { toggleMenu, toggleDarkMode, isDarkTheme } = useLayout()
             <i class="pi pi-inbox"></i>
             <span>Messages</span>
           </button>
-          <button type="button" class="layout-topbar-action">
-            <i class="pi pi-user"></i>
-            <span>Profile</span>
-          </button>
+          <Button
+            @click="toggle"
+            icon="pi pi-user"
+            size="large"
+            variant="text"
+            rounded
+            aria-label="User"
+            aria-haspopup="true"
+            aria-controls="overlay_menu_user"
+          />
+          <Menu ref="menu" id="overlay_menu_user" :model="items" :popup="true">
+            <template #item="{ item, props }">
+              <router-link v-if="item.route" v-slot="{ href, navigate }" :to="item.route" custom>
+                <a v-ripple :href="href" v-bind="props.action" @click="navigate">
+                  <span :class="item.icon" />
+                  <span class="ml-2">{{ item.label }}</span>
+                </a>
+              </router-link>
+              <a v-else v-ripple :href="item.url" :target="item.target" v-bind="props.action">
+                <span :class="item.icon" />
+                <span class="ml-2">{{ item.label }}</span>
+              </a>
+            </template>
+          </Menu>
         </div>
       </div>
     </div>
