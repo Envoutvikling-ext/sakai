@@ -51,6 +51,11 @@ const model = ref<MenuItem[]>([
         icon: 'pi pi-fw pi-circle-off',
         to: '/pages/empty',
       },
+      {
+        label: 'Server',
+        icon: 'pi pi-fw pi-circle-off',
+        to: '/pages/server',
+      },
     ],
   },
 ])

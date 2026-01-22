@@ -23,6 +23,16 @@ const router = createRouter({
           name: 'empty',
           component: () => import('@/views/pages/Empty.vue'),
         },
+        {
+          path: '/pages/server',
+          name: 'server',
+          component: () => import('@/views/pages/ServerData.vue'),
+        },
+        {
+          path: '/pages/myinfo',
+          name: 'myinfo',
+          component: () => import('@/views/pages/MyInfo.vue'),
+        },
       ],
     },
     {
