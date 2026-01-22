@@ -1,0 +1,135 @@
+{
+  "_index-Bwyl5fL1.js": {
+    "file": "assets/index-Bwyl5fL1.js",
+    "name": "index",
+    "imports": [
+      "src/main.ts"
+    ]
+  },
+  "_index-C1YL5F7d.js": {
+    "file": "assets/index-C1YL5F7d.js",
+    "name": "index",
+    "imports": [
+      "src/main.ts"
+    ]
+  },
+  "node_modules/chart.js/auto/auto.esm.js": {
+    "file": "assets/auto.esm-CnuQpfSc.js",
+    "name": "auto.esm",
+    "src": "node_modules/chart.js/auto/auto.esm.js",
+    "isDynamicEntry": true
+  },
+  "node_modules/primeicons/fonts/primeicons.eot": {
+    "file": "assets/primeicons-DMOk5skT.eot",
+    "src": "node_modules/primeicons/fonts/primeicons.eot"
+  },
+  "node_modules/primeicons/fonts/primeicons.svg": {
+    "file": "assets/primeicons-Dr5RGzOO.svg",
+    "src": "node_modules/primeicons/fonts/primeicons.svg"
+  },
+  "node_modules/primeicons/fonts/primeicons.ttf": {
+    "file": "assets/primeicons-MpK4pl85.ttf",
+    "src": "node_modules/primeicons/fonts/primeicons.ttf"
+  },
+  "node_modules/primeicons/fonts/primeicons.woff": {
+    "file": "assets/primeicons-WjwUDZjB.woff",
+    "src": "node_modules/primeicons/fonts/primeicons.woff"
+  },
+  "node_modules/primeicons/fonts/primeicons.woff2": {
+    "file": "assets/primeicons-C6QP2o4f.woff2",
+    "src": "node_modules/primeicons/fonts/primeicons.woff2"
+  },
+  "src/assets/icons/logo-envo-purple.svg": {
+    "file": "assets/logo-envo-purple-CG4nEzHl.svg",
+    "src": "src/assets/icons/logo-envo-purple.svg"
+  },
+  "src/main.ts": {
+    "file": "assets/main-DX18YVhn.js",
+    "name": "main",
+    "src": "src/main.ts",
+    "isEntry": true,
+    "dynamicImports": [
+      "src/views/Dashboard.vue",
+      "src/views/uikit/FormLayout.vue",
+      "src/views/pages/Empty.vue",
+      "src/views/pages/ServerData.vue",
+      "src/views/pages/MyInfo.vue",
+      "src/views/pages/NotFound.vue"
+    ],
+    "css": [
+      "assets/main-B0JDFj4-.css"
+    ],
+    "assets": [
+      "assets/logo-envo-purple-CG4nEzHl.svg",
+      "assets/primeicons-DMOk5skT.eot",
+      "assets/primeicons-C6QP2o4f.woff2",
+      "assets/primeicons-WjwUDZjB.woff",
+      "assets/primeicons-MpK4pl85.ttf",
+      "assets/primeicons-Dr5RGzOO.svg"
+    ]
+  },
+  "src/views/Dashboard.vue": {
+    "file": "assets/Dashboard-C1dVssss.js",
+    "name": "Dashboard",
+    "src": "src/views/Dashboard.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/main.ts",
+      "_index-C1YL5F7d.js",
+      "_index-Bwyl5fL1.js"
+    ],
+    "dynamicImports": [
+      "node_modules/chart.js/auto/auto.esm.js"
+    ]
+  },
+  "src/views/pages/Empty.vue": {
+    "file": "assets/Empty-C7Ctae-t.js",
+    "name": "Empty",
+    "src": "src/views/pages/Empty.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/main.ts"
+    ]
+  },
+  "src/views/pages/MyInfo.vue": {
+    "file": "assets/MyInfo-Bur5DlaH.js",
+    "name": "MyInfo",
+    "src": "src/views/pages/MyInfo.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/main.ts",
+      "_index-Bwyl5fL1.js"
+    ]
+  },
+  "src/views/pages/NotFound.vue": {
+    "file": "assets/NotFound-q59KdZaf.js",
+    "name": "NotFound",
+    "src": "src/views/pages/NotFound.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/main.ts"
+    ]
+  },
+  "src/views/pages/ServerData.vue": {
+    "file": "assets/ServerData-De5yKy81.js",
+    "name": "ServerData",
+    "src": "src/views/pages/ServerData.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/main.ts"
+    ],
+    "css": [
+      "assets/ServerData-Con2ZZnG.css"
+    ]
+  },
+  "src/views/uikit/FormLayout.vue": {
+    "file": "assets/FormLayout-B-qHVvKr.js",
+    "name": "FormLayout",
+    "src": "src/views/uikit/FormLayout.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/main.ts",
+      "_index-C1YL5F7d.js"
+    ]
+  }
+}
